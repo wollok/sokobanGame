@@ -9,8 +9,8 @@ object nivel1 {
 	method cargar() {
 		
 //	PAREDES
-		const ancho = wgame.getWidth() - 1
-		const largo = wgame.getHeight() - 1
+		const ancho = game.getWidth() - 1
+		const largo = game.getHeight() - 1
 	
 		var posParedes = []
 		(0 .. ancho).forEach{ n => posParedes.add(new Position(n, 0)) } // bordeAbajo
@@ -34,7 +34,7 @@ object nivel1 {
 			
 //	SOKOBAN
 
-		wgame.addVisual(sokoban)
+		game.addVisual(sokoban)
 
 //	TECLADO
 		UP.onPressDo{ sokoban.irArriba() }
@@ -47,23 +47,23 @@ object nivel1 {
 		
 		
 //	COLISIÓNES
-		wgame.whenCollideDo(sokoban, { e => sokoban.empuja(e) })
+		game.whenCollideDo(sokoban, { e => sokoban.empuja(e) })
 	}
 	
 	method restart() {
-		wgame.clear()
+		game.clear()
 		self.cargar()
 	}
 	
 	method dibujar(dibujo) {
-		wgame.addVisual(dibujo)
+		game.addVisual(dibujo)
 		return dibujo
 	}
 	
 	method comprobarSiGano(cajas) {
 		if (cajas.all{ c => c.estaBienPosicionada() }) {
 			console.println("GANASTE!") 
-			//wgame.clear()
+			//game.clear()
 		}
 	}
 }

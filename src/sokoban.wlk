@@ -8,6 +8,7 @@ object sokoban {
 		try
 			unElemento.movete(direccion)
 		catch e : Exception {
+			console.println("asd")
 			console.println(e)
 			self.retrocede()
 		}

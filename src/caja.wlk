@@ -16,7 +16,7 @@ class Caja {
 
 	method validarLugarLibre(direccion) {
 		const posAlLado = direccion.posicionDeAlLado(posicion) 
-		var lugarLibre = wgame.getObjectsIn(posAlLado)
+		var lugarLibre = game.getObjectsIn(posAlLado)
 			.all{ obj => obj.puedePisarte(self) } 
 		
 		if (!lugarLibre) 
