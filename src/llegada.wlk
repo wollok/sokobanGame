@@ -10,7 +10,7 @@ class Llegada {
 	
 	method puedePisarte(_) = true
 	
-	method getImagen() = "almacenaje.png"
-	method getPosicion() = posicion
-	method setPosicion(pos) {posicion = pos}
+	method imagen() = "almacenaje.png"
+	method posicion() = posicion
+	method posicion(pos) {posicion = pos}
 }

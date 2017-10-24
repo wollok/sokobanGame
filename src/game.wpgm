@@ -1,0 +1,12 @@
+import niveles.*
+
+program SokobanGame {
+	game.title("Sokoban")
+	game.height(7)
+	game.width(9)
+	game.ground("suelo.png")
+
+	nivel1.cargar()
+	
+	game.start()
+}

@@ -9,8 +9,8 @@ object nivel1 {
 	method cargar() {
 		
 //	PAREDES
-		const ancho = game.getWidth() - 1
-		const largo = game.getHeight() - 1
+		const ancho = game.width() - 1
+		const largo = game.height() - 1
 	
 		var posParedes = []
 		(0 .. ancho).forEach{ n => posParedes.add(new Position(n, 0)) } // bordeAbajo

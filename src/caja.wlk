@@ -25,7 +25,7 @@ class Caja {
 	
 	method puedePisarte(_) = false
 
-	method getImagen() {
+	method imagen() {
 		if (self.estaBienPosicionada())
 			return "caja_ok.png"
 		
@@ -34,10 +34,10 @@ class Caja {
 	
 	method estaBienPosicionada() {
 		return llegadas
-			.map{ llegada => llegada.getPosicion() }
-			.contains(self.getPosicion()) //TODO: Redefinier el (==) en Position!
+			.map{ llegada => llegada.posicion() }
+			.contains(self.posicion()) //TODO: Redefinier el (==) en Position!
 	}
 	
-	method getPosicion() = posicion
-	method setPosicion(pos) {posicion = pos}
+	method posicion() = posicion
+	method posicion(pos) {posicion = pos}
 }
