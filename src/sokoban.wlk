@@ -7,9 +7,7 @@ object sokoban {
 	method empuja(unElemento) {
 		try
 			unElemento.movete(direccion)
-		catch e : Exception {
-			console.println("asd")
-			console.println(e)
+		catch e {
 			self.retrocede()
 		}
 	}
