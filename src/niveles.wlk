@@ -22,7 +22,7 @@ object nivel1 {
 		posParedes.addAll([new Position(1,2), new Position(2,2),new Position(6,2), new Position(7,2)])
 		posParedes.addAll([new Position(1,1), new Position(2,1),new Position(6,1), new Position(7,1)])
 	
-		var paredes = posParedes.map{ p => self.dibujar(new Pared(p)) }	
+		posParedes.forEach { p => self.dibujar(new Pared(p)) }	
 		
 //	LLEGADAS
 		var llegadas = [new Position(4, 4), new Position(4, 3),new Position(4, 2), new Position(4, 1)]
@@ -37,13 +37,13 @@ object nivel1 {
 		game.addVisual(sokoban)
 
 //	TECLADO
-		UP.onPressDo{ sokoban.irArriba() }
-		DOWN.onPressDo{ sokoban.irAbajo() }
-		LEFT.onPressDo{ sokoban.irIzquierda() }
-		RIGHT.onPressDo{ sokoban.irDerecha() }
+		keyboard.up().onPressDo{ sokoban.irArriba() }
+		keyboard.down().onPressDo{ sokoban.irAbajo() }
+		keyboard.left().onPressDo{ sokoban.irIzquierda() }
+		keyboard.right().onPressDo{ sokoban.irDerecha() }
 
-		R.onPressDo{ self.restart() }
-		ANY_KEY.onPressDo{ self.comprobarSiGano(cajas) }
+		keyboard.r().onPressDo{ self.restart() }
+		keyboard.any().onPressDo{ self.comprobarSiGano(cajas) }
 		
 		
 //	COLISIÓNES

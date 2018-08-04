@@ -6,6 +6,7 @@ program SokobanGame {
 	game.width(9)
 	game.ground("suelo.png")
 
+  
 	nivel1.cargar()
 	
 	game.start()

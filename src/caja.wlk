@@ -1,7 +1,7 @@
 
 class Caja {
-	var posicion
-	var llegadas
+	const property posicion
+	const property llegadas
 	
 	constructor(_posicion, _llegadas) {
 		llegadas = _llegadas
@@ -38,6 +38,4 @@ class Caja {
 			.contains(self.posicion()) //TODO: Redefinier el (==) en Position!
 	}
 	
-	method posicion() = posicion
-	method posicion(pos) {posicion = pos}
 }

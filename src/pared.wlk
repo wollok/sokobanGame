@@ -1,6 +1,6 @@
 
 class Pared {
-	var posicion
+	var property posicion
 	
 	constructor(_posicion) {
 		posicion = _posicion
@@ -11,8 +11,5 @@ class Pared {
 	}
 	
 	method puedePisarte(_) = false
-	
 	method imagen() = "muro.png"
-	method posicion() = posicion
-	method posicion(pos) {posicion = pos}
 }
