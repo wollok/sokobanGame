@@ -1,19 +1,21 @@
+import wollok.game.*
 import direcciones.*
 
 object sokoban {
-	var posicion = new Position(4, 3)
+	var position = new Position(4, 3)
 	var direccion = arriba
 
 	method empuja(unElemento) {
 		try
 			unElemento.movete(direccion)
 		catch e {
+			console.println(e)
 			self.retrocede()
 		}
 	}
 	
 	method retrocede() {
-		direccion.opuesto().move(posicion)
+		position = direccion.opuesto().siguiente(position)
 	}
 	
 	method retrocedeCon(caja) {
@@ -42,16 +44,16 @@ object sokoban {
 	}
 	
 	method avanzar() {
-		direccion.move(posicion)
+		position = direccion.siguiente(position)
 	}
 	
 	method setDireccion(unaDireccion) {
 		direccion = unaDireccion
 	}
 	
-	method imagen() = "jugador.png"
-	method posicion() = posicion
-	method posicion(_posicion) {
-		posicion = _posicion
+	method image() = "jugador.png"
+	method position() = position
+	method position(_position) {
+		position = _position
 	} 
 }

@@ -1,9 +1,9 @@
 
 class Pared {
-	var property posicion
+	var property position
 	
-	constructor(_posicion) {
-		posicion = _posicion
+	constructor(_position) {
+		position = _position
 	}
 	
 	method movete(direccion) {
@@ -11,5 +11,5 @@ class Pared {
 	}
 	
 	method puedePisarte(_) = false
-	method imagen() = "muro.png"
+	method image() = "muro.png"
 }

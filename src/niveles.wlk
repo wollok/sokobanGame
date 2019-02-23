@@ -62,8 +62,7 @@ object nivel1 {
 	
 	method comprobarSiGano(cajas) {
 		if (cajas.all{ c => c.estaBienPosicionada() }) {
-			console.println("GANASTE!") 
-			//game.clear()
+			game.say(sokoban, "GANASTE!") 
 		}
 	}
 }

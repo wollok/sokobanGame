@@ -1,13 +1,13 @@
 
 class Llegada {
-	const property posicion
+	const property position
 	
-	constructor (_posicion) {
-		posicion = _posicion
+	constructor (_position) {
+		position = _position
 	}
 	
 	method movete(direccion) { /* No pasa naranja */ }
 	method puedePisarte(_) = true
-	method imagen() = "almacenaje.png"
+	method image() = "almacenaje.png"
 
 }

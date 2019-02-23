@@ -1,21 +1,22 @@
+import wollok.game.*
 
 class Caja {
-	const property posicion
+	var property position
 	const property llegadas
 	
-	constructor(_posicion, _llegadas) {
+	constructor(_position, _llegadas) {
 		llegadas = _llegadas
-		posicion = _posicion
+		position = _position
 	}
 	
 
 	method movete(direccion) {
 		self.validarLugarLibre(direccion) 
-		direccion.move(posicion)
+		position = direccion.siguiente(position)
 	}
 
 	method validarLugarLibre(direccion) {
-		const posAlLado = direccion.posicionDeAlLado(posicion) 
+		const posAlLado = direccion.siguiente(position) 
 		var lugarLibre = game.getObjectsIn(posAlLado)
 			.all{ obj => obj.puedePisarte(self) } 
 		
@@ -25,7 +26,7 @@ class Caja {
 	
 	method puedePisarte(_) = false
 
-	method imagen() {
+	method image() {
 		if (self.estaBienPosicionada())
 			return "caja_ok.png"
 		
@@ -34,8 +35,7 @@ class Caja {
 	
 	method estaBienPosicionada() {
 		return llegadas
-			.map{ llegada => llegada.posicion() }
-			.contains(self.posicion()) //TODO: Redefinier el (==) en Position!
-	}
-	
+			.map{ llegada => llegada.position() }
+			.contains(self.position()) //TODO: Redefinier el (==) en Position!
+	}	
 }
