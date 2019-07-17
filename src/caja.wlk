@@ -4,12 +4,6 @@ class Caja {
 	var property position
 	const property llegadas
 	
-	constructor(_position, _llegadas) {
-		llegadas = _llegadas
-		position = _position
-	}
-	
-
 	method movete(direccion) {
 		self.validarLugarLibre(direccion) 
 		position = direccion.siguiente(position)
@@ -36,6 +30,6 @@ class Caja {
 	method estaBienPosicionada() {
 		return llegadas
 			.map{ llegada => llegada.position() }
-			.contains(self.position()) //TODO: Redefinier el (==) en Position!
+			.contains(self.position()) //TODO: Redefinir el (==) en Position!
 	}	
 }

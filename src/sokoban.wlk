@@ -2,7 +2,7 @@ import wollok.game.*
 import direcciones.*
 
 object sokoban {
-	var position = new Position(4, 3)
+	var property position = new Position(4, 3)
 	var direccion = arriba
 
 	method empuja(unElemento) {
@@ -52,8 +52,8 @@ object sokoban {
 	}
 	
 	method image() = "jugador.png"
-	method position() = position
-	method position(_position) {
-		position = _position
-	} 
+//	method position() = position
+//	method position(_position) {
+//		position = _position
+//	} 
 }
