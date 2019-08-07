@@ -2,7 +2,7 @@ import wollok.game.*
 import direcciones.*
 
 object sokoban {
-	var property position = new Position(4, 3)
+	var property position = game.at(4, 3)
 	var direccion = arriba
 
 	method empuja(unElemento) {

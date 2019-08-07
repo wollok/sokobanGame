@@ -15,7 +15,7 @@ class Caja {
 			.all{ obj => obj.puedePisarte(self) } 
 		
 		if (!lugarLibre) 
-			throw new Exception("Algo traba la caja.")
+			throw new Exception(message = "Algo traba la caja.")
 	}
 	
 	method puedePisarte(_) = false
