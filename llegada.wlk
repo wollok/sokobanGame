@@ -1,8 +1,9 @@
 
 class Llegada {
 	const property position
-	
-	method movete(direccion) { /* No pasa naranja */ }
+
+	// No pasa naranja cuando se quiere mover
+	method movete(direccion) { }
 	method puedePisarte(_) = true
 	method image() = "almacenaje.png"
 

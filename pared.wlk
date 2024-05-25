@@ -3,7 +3,7 @@ class Pared {
 	var property position
 	
 	method movete(direccion) {
-		throw new Exception(message = "No puedes mover las paredes.")
+		throw new DomainException(message = "No puedes mover las paredes.")
 	}
 	
 	method puedePisarte(_) = false

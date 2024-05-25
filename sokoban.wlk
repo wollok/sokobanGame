@@ -52,6 +52,7 @@ object sokoban {
 	}
 	
 	method image() = "jugador.png"
+	
 //	method position() = position
 //	method position(_position) {
 //		position = _position
